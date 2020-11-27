@@ -2591,14 +2591,14 @@ input, select, textarea {
 		-webkit-justify-content: space-between;
 		-ms-justify-content: space-between;
 		justify-content: space-between;
-		background-color: #1f1815;
+		background-color: #85CBF8;
 		background-attachment: scroll,								scroll;
-		background-image: url("/images/fulls/05.jpg"), url("/images/back.jpg");
+		background-image: url("../../images/back.jpg"), url("../../images/fulls/05.jpg");
 		background-position: top left,							top left;
 		background-repeat: repeat,								no-repeat;
 		background-size: auto,								150%;
-		color: #85CBF8;
-		/*color: rgba(255, 255, 255, 0.5);*/
+		/*color: #85CBF8;*/
+		color: rgba(255, 255, 255, 0.5);
 		height: 100%;
 		left: 0;
 		padding: 8em 4em;
