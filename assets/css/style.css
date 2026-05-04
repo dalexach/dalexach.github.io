@@ -1,12 +1,12 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --ink: #0f0f0e;
-  --paper: #f7f5f0;
-  --muted: #7a7870;
-  --accent: #c9442a;
-  --accent2: #1a6b5a;
-  --border: rgba(15,15,14,0.12);
+  --ink: #2b2c41;
+  --paper: #d2ebff;
+  --muted: #404066;
+  --accent: #edcc6f;
+  --accent2: #88cafc;
+  --border: rgba(43,44,65,0.15);
   --mono: 'DM Mono', monospace;
   --serif: 'DM Serif Display', Georgia, serif;
   --sans: 'DM Sans', sans-serif;
@@ -28,7 +28,7 @@ nav {
   position: fixed; top: 0; left: 0; right: 0; z-index: 100;
   display: flex; justify-content: space-between; align-items: center;
   padding: 1rem 3rem;
-  background: rgba(247,245,240,0.92);
+  background: rgba(210,235,255,0.92);
   backdrop-filter: blur(8px);
   border-bottom: 0.5px solid var(--border);
 }
@@ -114,7 +114,7 @@ nav ul a:hover { color: var(--ink); }
   color: var(--paper);
   border: 1px solid var(--ink);
 }
-.btn-primary:hover { background: var(--accent); border-color: var(--accent); }
+.btn-primary:hover { background: var(--accent); border-color: var(--accent); color: var(--ink); }
 .btn-ghost {
   color: var(--ink);
   border: 0.5px solid var(--border);
@@ -217,7 +217,7 @@ section {
   color: var(--ink);
   border: 0.5px solid var(--border);
   padding: 0.2rem 0.5rem;
-  background: white;
+  background: rgba(255,255,255,0.55);
 }
 
 /* EXPERIENCE */
