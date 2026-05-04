@@ -130,9 +130,9 @@ nav ul a:hover { color: var(--ink); }
 .hero-photo {
   width: 100%;
   height: 340px;
-  object-fit: cover;
-  object-position: center 30%;
+  object-fit: contain;
   display: block;
+  background: #6e8ff5;
   border-bottom: 0.5px solid var(--border);
 }
 .stat-grid {
@@ -431,7 +431,7 @@ footer p {
   nav { padding: 1rem 1.5rem; }
   .hero-left { padding: 3rem 1.5rem; }
   .hero-right { }
-  .hero-photo { height: 280px; }
+  .hero-photo { height: 260px; }
   section { padding: 4rem 1.5rem; }
   .exp-item { grid-template-columns: 180px 1fr; gap: 2rem; }
 }
@@ -444,7 +444,7 @@ footer p {
   .hero { grid-template-columns: 1fr; min-height: auto; }
   .hero-left { padding: 2.5rem 1.25rem; border-right: none; border-bottom: 0.5px solid var(--border); }
   .hero-right { padding: 0; }
-  .hero-photo { height: 260px; }
+  .hero-photo { height: 240px; }
   .stat-grid { grid-template-columns: 1fr 1fr; }
   section { padding: 2.5rem 1.25rem; }
   .exp-item { grid-template-columns: 1fr; gap: 0.5rem; }
