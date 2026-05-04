@@ -1,137 +1,693 @@
 <!DOCTYPE HTML>
-<html>
-	<head>
-		<title>Daniela Chamorro</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-	</head>
-	<body class="is-preload">
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Daniela Chamorro — Python Backend & Data Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@300;400;500&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-		<!-- Header -->
-			<header id="header">
-				<div class="inner">
-					<a href="#" class="image avatar"><img src="images/Daniela.jpg" alt="Daniela" /></a>
-					<h1>Hello world! <br><strong>I am Daniela Chamorro</strong>,</h1>
-					<h2>Backend Developer</h2>
-					<h3>Python</h3>
-					
-				</div>
-			</header>
+    :root {
+      --ink: #0f0f0e;
+      --paper: #f7f5f0;
+      --muted: #7a7870;
+      --accent: #c9442a;
+      --accent2: #1a6b5a;
+      --border: rgba(15,15,14,0.12);
+      --mono: 'DM Mono', monospace;
+      --serif: 'DM Serif Display', Georgia, serif;
+      --sans: 'DM Sans', sans-serif;
+    }
 
-		<!-- Main -->
-			<div id="main">
+    html { scroll-behavior: smooth; }
 
-				<!-- One -->
-					<section id="one">
-						<header class="major">
-							<h2>About me</h2>
-						</header>
-						<p>
-							I am a backend Python Developer, studying Software Engineer and
-							computer system Technology, I am passionate about Technology,
-							development, self-learning, and lover of learning. I have a good
-							understanding of software engineering topics such as algorithms, data
-							structures, Networking, Python, Flask, Django, Fast API, Ruby on Rails, Object-
-							Oriented Programming(OOP), Bash scripting, a little machine learning, and
-							some hardware and network knowledge.
-						</p>
-						<h3>Some languages and OS</h3>
-						<p align="center">
-							<img src="https://img.icons8.com/dusk/50/000000/c-programming.png" alt="C"/>
-							<img src="https://img.icons8.com/dusk/50/000000/python.png" alt="python"/>
-							<img src="https://img.icons8.com/dusk/50/000000/javascript.png" alt="JS"/>
-							<img src="https://img.icons8.com/dusk/50/000000/html-5.png" alt="HTML"/>
-							<img src="https://img.icons8.com/dusk/50/000000/css3.png" alt="css"/>
-							<img src="https://img.icons8.com/dusk/50/000000/sql.png" alt="SQL"/>
-							<img src="https://img.icons8.com/dusk/50/000000/mac-logo--v2.png" alt="ios"/>
-							<img src="https://img.icons8.com/dusk/50/000000/linux.png" alt="linux" />
-						</p>
-						<ul class="actions">
-							<li><a href="https://www.dropbox.com/s/gxvzjopprq0mwx3/CV%20Daniela.pdf?dl=0" class="button" target="_blank">
-							See my Resumé</a></li>
-						</ul>
-					</section>
+    body {
+      font-family: var(--sans);
+      background: var(--paper);
+      color: var(--ink);
+      font-size: 16px;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
 
-				<!-- Two -->
-					<section id="two">
-						<h2>Recent Work</h2>
-						<div class="row">
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="https://github.com/dalexach/simple_shell" target="_blank"><img src="images/shell.png" class="image fit thumb" alt="Shell" />
-								<h3>Shell</h3></a>
-								<p>A simple command line interpreter in C</p>
-							</article>
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="https://github.com/dalexach/AirBnB_clone_v4" target="_blank"><img src="images/hbnb.jpg" alt="HBNB" class="image fit thumb" />
-								<h3>HBNB</h3></a>
-								<p>s to deploy on your server a simple copy of the <a href="https://www.airbnb.com/">AirBnB website</a>.</p>
-							</article>
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="https://github.com/arabellak/SeahorsePlus" target="_blank"><img src="images/sea-logo.jpg" alt="Seahorse+" class="image fit thumb" />
-								<h3>Seahorse+</h3></a>
-								<p>Project that Request to Lastfm and play some music on our platform.</p>
-							</article>
-						</div>
-						<ul class="actions">
-							<li><a href="https://github.com/dalexach" class="button">All projects</a></li>
-						</ul>
-					</section>
+    /* NAV */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 1rem 3rem;
+      background: rgba(247,245,240,0.92);
+      backdrop-filter: blur(8px);
+      border-bottom: 0.5px solid var(--border);
+    }
+    .nav-logo {
+      font-family: var(--mono);
+      font-size: 13px;
+      font-weight: 400;
+      letter-spacing: 0.04em;
+      color: var(--ink);
+      text-decoration: none;
+    }
+    .nav-logo span { color: var(--accent); }
+    nav ul { list-style: none; display: flex; gap: 2rem; }
+    nav ul a {
+      font-size: 13px;
+      font-weight: 400;
+      color: var(--muted);
+      text-decoration: none;
+      letter-spacing: 0.02em;
+      transition: color 0.2s;
+    }
+    nav ul a:hover { color: var(--ink); }
 
-				<!-- Three -->
-					<section id="three">
-						<h2>Get In Touch</h2>
-						<p>You can contact me:</p>
-						<div class="row">
-							<div class="col-4 col-12-small">
-								<ul class="labeled-icons">
-									<li>
-										<h3 class="icon solid fa-home"><span class="label">Address</span></h3>
-										Medellín, Antioquia <br>
-										Colombia
-									</li>
-									<li>
-										<h3 class="icon solid fa-mobile-alt"><span class="label">Phone</span></h3>
-										(+57) 301-698-3274
-									</li>
-									<li>
-										 <a href="https://wa.me/573016983274?text=I%20saw%20your%20portafolio" target="_blank">
-										 Whatsapp</a>
-									</li>
-									<li>
-										<h3 class="icon solid fa-envelope"><span class="label">Email</span></h3>
-										<a href="mailto:dalexach@gmail.com">dalexach@gmail.com</a>
-									</li>
-								</ul>
-							</div>
-						</div>
-					</section>
+    /* HERO */
+    .hero {
+      min-height: 100vh;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      padding-top: 80px;
+    }
+    .hero-left {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 4rem 3rem 4rem 3rem;
+      border-right: 0.5px solid var(--border);
+    }
+    .hero-tag {
+      font-family: var(--mono);
+      font-size: 11px;
+      font-weight: 400;
+      letter-spacing: 0.12em;
+      color: var(--accent);
+      text-transform: uppercase;
+      margin-bottom: 1.5rem;
+    }
+    .hero-name {
+      font-family: var(--serif);
+      font-size: clamp(3rem, 6vw, 5.5rem);
+      line-height: 1.05;
+      letter-spacing: -0.01em;
+      margin-bottom: 1.5rem;
+      color: var(--ink);
+    }
+    .hero-name em {
+      font-style: italic;
+      color: var(--accent2);
+    }
+    .hero-desc {
+      font-size: 16px;
+      color: var(--muted);
+      max-width: 42ch;
+      margin-bottom: 2.5rem;
+      font-weight: 300;
+    }
+    .hero-cta {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    .btn {
+      font-family: var(--mono);
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      padding: 0.75rem 1.5rem;
+      text-decoration: none;
+      display: inline-block;
+      transition: all 0.2s;
+    }
+    .btn-primary {
+      background: var(--ink);
+      color: var(--paper);
+      border: 1px solid var(--ink);
+    }
+    .btn-primary:hover { background: var(--accent); border-color: var(--accent); }
+    .btn-ghost {
+      color: var(--ink);
+      border: 0.5px solid var(--border);
+    }
+    .btn-ghost:hover { border-color: var(--ink); }
 
-			</div>
+    .hero-right {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 4rem 3rem;
+    }
+    .stat-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+    }
+    .stat-item {
+      padding: 2rem 1.5rem;
+      border-bottom: 0.5px solid var(--border);
+      border-right: 0.5px solid var(--border);
+    }
+    .stat-item:nth-child(even) { border-right: none; }
+    .stat-item:nth-last-child(-n+2) { border-bottom: none; }
+    .stat-num {
+      font-family: var(--serif);
+      font-size: 2.8rem;
+      line-height: 1;
+      margin-bottom: 0.25rem;
+    }
+    .stat-num span { color: var(--accent); }
+    .stat-label {
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+      text-transform: uppercase;
+    }
 
-		<!-- Footer -->
-			<footer id="footer">
-				<div class="inner">
-					<ul class="icons">
-						<li><a href="https://twitter.com/dalexach" class="icon brands fa-twitter" target="_blank"><span class="label">Twitter</span></a></li>
-						<li><a href="https://github.com/dalexach" class="icon brands fa-github" target="_blank"><span class="label">Github</span></a></li>
-						<li><a href="https://www.linkedin.com/in/dalexach" class="icon brands fa-linkedin" target="_blank"><span class="label">Dribbble</span></a></li>
-						<li><a href="https://www.instagram.com/dalexach/" class="icon brands fa-instagram" target="_blank"><span class="label">Dribbble</span></a></li>
-						<li><a href="mailto:dalexach@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
-					</ul>
-					<ul class="copyright">
-						<li>&copy; Daniela Chamorro 2020</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-					</ul>
-				</div>
-			</footer>
+    /* SECTION STRUCTURE */
+    section {
+      padding: 5rem 3rem;
+      border-top: 0.5px solid var(--border);
+    }
+    .section-header {
+      display: flex;
+      align-items: baseline;
+      gap: 1rem;
+      margin-bottom: 3rem;
+    }
+    .section-num {
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--accent);
+      letter-spacing: 0.1em;
+    }
+    .section-title {
+      font-family: var(--serif);
+      font-size: clamp(1.8rem, 3vw, 2.5rem);
+      line-height: 1.1;
+    }
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.poptrox.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+    /* SKILLS */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 0;
+    }
+    .skill-group {
+      padding: 2rem 1.5rem;
+      border-right: 0.5px solid var(--border);
+      border-bottom: 0.5px solid var(--border);
+    }
+    .skill-group:last-child, .skill-group:nth-child(3n) { border-right: none; }
+    .skill-group-title {
+      font-family: var(--mono);
+      font-size: 10px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent2);
+      margin-bottom: 1rem;
+    }
+    .skill-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+    }
+    .tag {
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--ink);
+      border: 0.5px solid var(--border);
+      padding: 0.2rem 0.5rem;
+      background: white;
+    }
 
-	</body>
+    /* EXPERIENCE */
+    .exp-list { display: flex; flex-direction: column; }
+    .exp-item {
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      gap: 3rem;
+      padding: 2.5rem 0;
+      border-bottom: 0.5px solid var(--border);
+    }
+    .exp-item:first-child { border-top: 0.5px solid var(--border); }
+    .exp-meta {}
+    .exp-period {
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--muted);
+      letter-spacing: 0.06em;
+      margin-bottom: 0.4rem;
+    }
+    .exp-company {
+      font-family: var(--serif);
+      font-size: 1.1rem;
+      margin-bottom: 0.2rem;
+    }
+    .exp-role {
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--accent);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+    .exp-content {}
+    .exp-points {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    .exp-points li {
+      font-size: 15px;
+      color: #3a3934;
+      padding-left: 1rem;
+      position: relative;
+      font-weight: 300;
+    }
+    .exp-points li::before {
+      content: '—';
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-family: var(--mono);
+      font-size: 12px;
+    }
+    .exp-stack {
+      margin-top: 1rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.3rem;
+    }
+
+    /* EDUCATION */
+    .edu-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 0;
+    }
+    .edu-item {
+      padding: 2rem 1.5rem;
+      border-right: 0.5px solid var(--border);
+    }
+    .edu-item:last-child { border-right: none; }
+    .edu-degree {
+      font-family: var(--serif);
+      font-size: 1.1rem;
+      margin-bottom: 0.25rem;
+    }
+    .edu-school {
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--muted);
+      letter-spacing: 0.04em;
+      margin-bottom: 0.25rem;
+    }
+    .edu-year {
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--accent);
+    }
+
+    /* CONTACT */
+    .contact-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+    .contact-headline {
+      font-family: var(--serif);
+      font-size: clamp(2rem, 4vw, 3.5rem);
+      font-style: italic;
+      line-height: 1.1;
+    }
+    .contact-links {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+    .contact-link {
+      font-family: var(--mono);
+      font-size: 13px;
+      color: var(--ink);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      border-bottom: 0.5px solid transparent;
+      padding-bottom: 2px;
+      transition: border-color 0.2s;
+    }
+    .contact-link:hover { border-color: var(--ink); }
+    .contact-link-type {
+      font-size: 10px;
+      color: var(--muted);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      min-width: 60px;
+    }
+
+    /* FOOTER */
+    footer {
+      border-top: 0.5px solid var(--border);
+      padding: 1.5rem 3rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    footer p {
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--muted);
+      letter-spacing: 0.04em;
+    }
+    .footer-socials { display: flex; gap: 1.5rem; }
+    .footer-socials a {
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--muted);
+      text-decoration: none;
+      letter-spacing: 0.04em;
+      transition: color 0.2s;
+    }
+    .footer-socials a:hover { color: var(--ink); }
+
+    /* ANIMATIONS */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(16px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .hero-tag { animation: fadeUp 0.5s ease both; }
+    .hero-name { animation: fadeUp 0.6s 0.1s ease both; }
+    .hero-desc { animation: fadeUp 0.6s 0.2s ease both; }
+    .hero-cta { animation: fadeUp 0.6s 0.3s ease both; }
+    .hero-right { animation: fadeUp 0.7s 0.2s ease both; }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      nav { padding: 1rem 1.25rem; }
+      nav ul { gap: 1rem; }
+      .hero { grid-template-columns: 1fr; min-height: auto; }
+      .hero-left { padding: 2.5rem 1.25rem; border-right: none; border-bottom: 0.5px solid var(--border); }
+      .hero-right { padding: 2rem 1.25rem; }
+      .stat-grid { grid-template-columns: 1fr 1fr; }
+      section { padding: 3rem 1.25rem; }
+      .exp-item { grid-template-columns: 1fr; gap: 0.75rem; }
+      .contact-row { flex-direction: column; align-items: flex-start; }
+      footer { flex-direction: column; gap: 1rem; align-items: flex-start; }
+      .edu-grid { grid-template-columns: 1fr; }
+      .edu-item { border-right: none; border-bottom: 0.5px solid var(--border); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="#" class="nav-logo">dalexach<span>.dev</span></a>
+    <ul>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-left">
+      <p class="hero-tag">// Python Backend · Data Engineer · AI Systems</p>
+      <h1 class="hero-name">Daniela<br><em>Chamorro</em></h1>
+      <p class="hero-desc">
+        Backend engineer specializing in scalable API architecture, data pipelines, and AI-powered systems. Building with Python, AWS, and LLMs from Medellín, Colombia.
+      </p>
+      <div class="hero-cta">
+        <a href="mailto:dalexach@gmail.com" class="btn btn-primary">Get in touch</a>
+        <a href="https://github.com/dalexach" target="_blank" class="btn btn-ghost">GitHub →</a>
+      </div>
+    </div>
+    <div class="hero-right">
+      <div class="stat-grid">
+        <div class="stat-item">
+          <div class="stat-num">6<span>+</span></div>
+          <div class="stat-label">Years of experience</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">4</div>
+          <div class="stat-label">Companies</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">3</div>
+          <div class="stat-label">Cloud platforms</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">∞</div>
+          <div class="stat-label">Bugs fixed</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="section-header">
+      <span class="section-num">01</span>
+      <h2 class="section-title">Technical skills</h2>
+    </div>
+    <div class="skills-grid">
+      <div class="skill-group">
+        <div class="skill-group-title">Languages</div>
+        <div class="skill-tags">
+          <span class="tag">Python</span>
+          <span class="tag">SQL</span>
+          <span class="tag">JavaScript</span>
+          <span class="tag">Ruby</span>
+          <span class="tag">C</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <div class="skill-group-title">Frameworks & APIs</div>
+        <div class="skill-tags">
+          <span class="tag">FastAPI</span>
+          <span class="tag">Flask</span>
+          <span class="tag">Django</span>
+          <span class="tag">Ruby on Rails</span>
+          <span class="tag">Alembic</span>
+          <span class="tag">Prisma</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <div class="skill-group-title">Data & Analytics</div>
+        <div class="skill-tags">
+          <span class="tag">pandas</span>
+          <span class="tag">Power BI</span>
+          <span class="tag">PostgreSQL</span>
+          <span class="tag">MySQL</span>
+          <span class="tag">MongoDB</span>
+          <span class="tag">DynamoDB</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <div class="skill-group-title">Cloud & DevOps</div>
+        <div class="skill-tags">
+          <span class="tag">AWS Glue</span>
+          <span class="tag">AWS Lambda</span>
+          <span class="tag">S3</span>
+          <span class="tag">Step Functions</span>
+          <span class="tag">GCP</span>
+          <span class="tag">Cloud Run</span>
+          <span class="tag">CI/CD</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <div class="skill-group-title">AI & NLP</div>
+        <div class="skill-tags">
+          <span class="tag">OpenAI</span>
+          <span class="tag">Groq</span>
+          <span class="tag">HuggingFace</span>
+          <span class="tag">GPT Models</span>
+          <span class="tag">Whisper</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <div class="skill-group-title">Tools & Platforms</div>
+        <div class="skill-tags">
+          <span class="tag">Vercel</span>
+          <span class="tag">Railway</span>
+          <span class="tag">Supabase</span>
+          <span class="tag">Next.js</span>
+          <span class="tag">Docker</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <div class="section-header">
+      <span class="section-num">02</span>
+      <h2 class="section-title">Experience</h2>
+    </div>
+    <div class="exp-list">
+
+      <div class="exp-item">
+        <div class="exp-meta">
+          <div class="exp-period">Mar 2025 — Present</div>
+          <div class="exp-company">Lean Solutions Group</div>
+          <div class="exp-role">Data Analyst</div>
+        </div>
+        <div class="exp-content">
+          <ul class="exp-points">
+            <li>Automate data workflows with Python scripts supporting consistent operational processes.</li>
+            <li>Collect, validate, and explore data from multiple sources ensuring quality for strategic analysis.</li>
+            <li>Build KPI dashboards in Power BI enabling tracking of key metrics for Logicsource, Inc.</li>
+            <li>Conduct daily audits identifying inconsistencies and proposing improvements in data collection.</li>
+            <li>Deliver analytical reports with historical trends and data-backed recommendations.</li>
+          </ul>
+          <div class="exp-stack">
+            <span class="tag">Python</span>
+            <span class="tag">Power BI</span>
+            <span class="tag">SQL</span>
+            <span class="tag">AWS</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-meta">
+          <div class="exp-period">Aug 2024 — Feb 2025</div>
+          <div class="exp-company">Back to Human S.A.S.</div>
+          <div class="exp-role">AI Development Leader</div>
+        </div>
+        <div class="exp-content">
+          <ul class="exp-points">
+            <li>Designed and implemented AI models using OpenAI, HuggingFace, and Groq.</li>
+            <li>Built robust, scalable APIs for AI products using FastAPI and Flask.</li>
+            <li>Implemented GPT-based chatbots for process automation and customer interaction.</li>
+            <li>Managed deployment and monitoring across GCP, AWS, Vercel, and Railway.</li>
+          </ul>
+          <div class="exp-stack">
+            <span class="tag">FastAPI</span>
+            <span class="tag">OpenAI</span>
+            <span class="tag">Groq</span>
+            <span class="tag">GCP</span>
+            <span class="tag">AWS</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-meta">
+          <div class="exp-period">Apr 2022 — Jul 2024</div>
+          <div class="exp-company">DualBoot Partners</div>
+          <div class="exp-role">Backend Advanced Developer</div>
+        </div>
+        <div class="exp-content">
+          <ul class="exp-points">
+            <li>Built a REST application in Django for commercial management with Google/Facebook login and Twilio integration.</li>
+            <li>Migrated APIs to FastAPI and set up monitoring in AWS for log tracking.</li>
+            <li>Developed and maintained an internal organizational system using Ruby on Rails.</li>
+          </ul>
+          <div class="exp-stack">
+            <span class="tag">Django</span>
+            <span class="tag">FastAPI</span>
+            <span class="tag">Ruby on Rails</span>
+            <span class="tag">AWS</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-meta">
+          <div class="exp-period">Dec 2020 — Mar 2022</div>
+          <div class="exp-company">Ayenda Hoteles</div>
+          <div class="exp-role">Backend Developer</div>
+        </div>
+        <div class="exp-content">
+          <ul class="exp-points">
+            <li>Maintained and developed hotel management platforms at scale.</li>
+            <li>Resolved bugs, improved performance, and delivered steady feature improvements.</li>
+            <li>Deployed payment system enhancements built with Ruby on Rails.</li>
+          </ul>
+          <div class="exp-stack">
+            <span class="tag">Ruby on Rails</span>
+            <span class="tag">PostgreSQL</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section id="education">
+    <div class="section-header">
+      <span class="section-num">03</span>
+      <h2 class="section-title">Education</h2>
+    </div>
+    <div class="edu-grid">
+      <div class="edu-item">
+        <div class="edu-degree">Software Engineering + Big Data for Business</div>
+        <div class="edu-school">Politécnico Grancolombiano</div>
+        <div class="edu-year">2023 – 2026</div>
+      </div>
+      <div class="edu-item">
+        <div class="edu-degree">Diploma in Computer Science</div>
+        <div class="edu-school">Politécnico Grancolombiano</div>
+        <div class="edu-year">Apr – Jun 2026</div>
+      </div>
+      <div class="edu-item">
+        <div class="edu-degree">Full-Stack Engineering + Machine Learning</div>
+        <div class="edu-school">Holberton School</div>
+        <div class="edu-year">2019 – 2020</div>
+      </div>
+      <div class="edu-item">
+        <div class="edu-degree">Tecnología en Computación</div>
+        <div class="edu-school">Universidad de Nariño</div>
+        <div class="edu-year">2012 – 2017</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="contact-row">
+      <h2 class="contact-headline">Let's work<br>together.</h2>
+      <div class="contact-links">
+        <a href="mailto:dalexach@gmail.com" class="contact-link">
+          <span class="contact-link-type">Email</span>
+          dalexach@gmail.com
+        </a>
+        <a href="tel:+573016983274" class="contact-link">
+          <span class="contact-link-type">Phone</span>
+          (+57) 301 698 3274
+        </a>
+        <a href="https://github.com/dalexach" target="_blank" class="contact-link">
+          <span class="contact-link-type">GitHub</span>
+          github.com/dalexach
+        </a>
+        <a href="https://www.linkedin.com/in/dalexach" target="_blank" class="contact-link">
+          <span class="contact-link-type">LinkedIn</span>
+          linkedin.com/in/dalexach
+        </a>
+        <a href="https://wa.me/573016983274" target="_blank" class="contact-link">
+          <span class="contact-link-type">WhatsApp</span>
+          +57 301 698 3274
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 Daniela Chamorro — Medellín, Colombia</p>
+    <div class="footer-socials">
+      <a href="https://github.com/dalexach" target="_blank">GitHub</a>
+      <a href="https://www.linkedin.com/in/dalexach" target="_blank">LinkedIn</a>
+      <a href="https://twitter.com/dalexach" target="_blank">Twitter</a>
+      <a href="https://www.instagram.com/dalexach/" target="_blank">Instagram</a>
+    </div>
+  </footer>
+
+</body>
 </html>
