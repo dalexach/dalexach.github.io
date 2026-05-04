@@ -61,6 +61,23 @@ nav ul a {
   transition: color 0.2s;
 }
 nav ul a:hover { color: var(--ink); }
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+.lang-toggle {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  color: var(--muted);
+  background: none;
+  border: 0.5px solid var(--border);
+  padding: 0.25rem 0.6rem;
+  cursor: pointer;
+  transition: color 0.2s, border-color 0.2s;
+}
+.lang-toggle:hover { color: var(--ink); border-color: var(--ink); }
 
 /* HERO */
 .hero {

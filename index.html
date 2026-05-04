@@ -16,24 +16,27 @@
       <img src="images/Daniela.jpg" alt="" class="nav-avatar" />
       dalexach<span>.dev</span>
     </a>
-    <ul>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
+    <div class="nav-right">
+      <ul>
+        <li><a href="#experience" data-i18n="nav.experience">Experience</a></li>
+        <li><a href="#skills" data-i18n="nav.skills">Skills</a></li>
+        <li><a href="#projects" data-i18n="nav.projects">Projects</a></li>
+        <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
+      </ul>
+      <button class="lang-toggle" id="langToggle" aria-label="Switch language">ES</button>
+    </div>
   </nav>
 
   <!-- HERO -->
   <div class="hero">
     <div class="hero-left">
-      <p class="hero-tag">// Python Backend · Data Engineer · AI Systems</p>
+      <p class="hero-tag" data-i18n="hero.tag">// Python Backend · Data Engineer · AI Systems</p>
       <h1 class="hero-name">Daniela<br><em>Chamorro</em></h1>
-      <p class="hero-desc">
+      <p class="hero-desc" data-i18n="hero.desc">
         Backend engineer specializing in scalable API architecture, data pipelines, and AI-powered systems. Building with Python, AWS, and LLMs from Medellín, Colombia.
       </p>
       <div class="hero-cta">
-        <a href="#contact" class="btn btn-primary">Get in touch</a>
+        <a href="#contact" class="btn btn-primary" data-i18n="hero.cta">Get in touch</a>
         <a href="https://github.com/dalexach" target="_blank" class="btn btn-ghost">GitHub →</a>
       </div>
     </div>
@@ -42,19 +45,19 @@
       <div class="stat-grid">
         <div class="stat-item">
           <div class="stat-num">6<span>+</span></div>
-          <div class="stat-label">Years of experience</div>
+          <div class="stat-label" data-i18n="stat.years">Years of experience</div>
         </div>
         <div class="stat-item">
           <div class="stat-num">4</div>
-          <div class="stat-label">Companies</div>
+          <div class="stat-label" data-i18n="stat.companies">Companies</div>
         </div>
         <div class="stat-item">
           <div class="stat-num">3</div>
-          <div class="stat-label">Cloud platforms</div>
+          <div class="stat-label" data-i18n="stat.cloud">Cloud platforms</div>
         </div>
         <div class="stat-item">
           <div class="stat-num">∞</div>
-          <div class="stat-label">Bugs fixed</div>
+          <div class="stat-label" data-i18n="stat.bugs">Bugs fixed</div>
         </div>
       </div>
     </div>
@@ -64,11 +67,11 @@
   <section id="skills">
     <div class="section-header">
       <span class="section-num">01</span>
-      <h2 class="section-title">Technical skills</h2>
+      <h2 class="section-title" data-i18n="section.skills">Technical skills</h2>
     </div>
     <div class="skills-grid">
       <div class="skill-group">
-        <div class="skill-group-title">Languages</div>
+        <div class="skill-group-title" data-i18n="skills.languages">Languages</div>
         <div class="skill-tags">
           <span class="tag">Python</span>
           <span class="tag">SQL</span>
@@ -78,7 +81,7 @@
         </div>
       </div>
       <div class="skill-group">
-        <div class="skill-group-title">Frameworks & APIs</div>
+        <div class="skill-group-title" data-i18n="skills.frameworks">Frameworks & APIs</div>
         <div class="skill-tags">
           <span class="tag">FastAPI</span>
           <span class="tag">Flask</span>
@@ -89,7 +92,7 @@
         </div>
       </div>
       <div class="skill-group">
-        <div class="skill-group-title">Data & Analytics</div>
+        <div class="skill-group-title" data-i18n="skills.data">Data & Analytics</div>
         <div class="skill-tags">
           <span class="tag">pandas</span>
           <span class="tag">Power BI</span>
@@ -100,7 +103,7 @@
         </div>
       </div>
       <div class="skill-group">
-        <div class="skill-group-title">Cloud & DevOps</div>
+        <div class="skill-group-title" data-i18n="skills.cloud">Cloud & DevOps</div>
         <div class="skill-tags">
           <span class="tag">AWS Glue</span>
           <span class="tag">AWS Lambda</span>
@@ -112,7 +115,7 @@
         </div>
       </div>
       <div class="skill-group">
-        <div class="skill-group-title">AI & NLP</div>
+        <div class="skill-group-title" data-i18n="skills.ai">AI & NLP</div>
         <div class="skill-tags">
           <span class="tag">OpenAI</span>
           <span class="tag">Groq</span>
@@ -122,7 +125,7 @@
         </div>
       </div>
       <div class="skill-group">
-        <div class="skill-group-title">Tools & Platforms</div>
+        <div class="skill-group-title" data-i18n="skills.tools">Tools & Platforms</div>
         <div class="skill-tags">
           <span class="tag">Vercel</span>
           <span class="tag">Railway</span>
@@ -138,23 +141,23 @@
   <section id="experience">
     <div class="section-header">
       <span class="section-num">02</span>
-      <h2 class="section-title">Experience</h2>
+      <h2 class="section-title" data-i18n="section.experience">Experience</h2>
     </div>
     <div class="exp-list">
 
       <div class="exp-item">
         <div class="exp-meta">
-          <div class="exp-period">Mar 2025 — Present</div>
+          <div class="exp-period" data-i18n="exp.period.lean">Mar 2025 — Present</div>
           <div class="exp-company">Lean Solutions Group</div>
-          <div class="exp-role">Data Analyst</div>
+          <div class="exp-role" data-i18n="exp.role.lean">Data Analyst</div>
         </div>
         <div class="exp-content">
           <ul class="exp-points">
-            <li>Automate data workflows with Python scripts supporting consistent operational processes.</li>
-            <li>Collect, validate, and explore data from multiple sources ensuring quality for strategic analysis.</li>
-            <li>Build KPI dashboards in Power BI enabling tracking of key metrics for Logicsource, Inc.</li>
-            <li>Conduct daily audits identifying inconsistencies and proposing improvements in data collection.</li>
-            <li>Deliver analytical reports with historical trends and data-backed recommendations.</li>
+            <li data-i18n="exp.bullet.lean.1">Automate data workflows with Python scripts supporting consistent operational processes.</li>
+            <li data-i18n="exp.bullet.lean.2">Collect, validate, and explore data from multiple sources ensuring quality for strategic analysis.</li>
+            <li data-i18n="exp.bullet.lean.3">Build KPI dashboards in Power BI enabling tracking of key metrics for Logicsource, Inc.</li>
+            <li data-i18n="exp.bullet.lean.4">Conduct daily audits identifying inconsistencies and proposing improvements in data collection.</li>
+            <li data-i18n="exp.bullet.lean.5">Deliver analytical reports with historical trends and data-backed recommendations.</li>
           </ul>
           <div class="exp-stack">
             <span class="tag">Python</span>
@@ -167,16 +170,16 @@
 
       <div class="exp-item">
         <div class="exp-meta">
-          <div class="exp-period">Aug 2024 — Feb 2025</div>
+          <div class="exp-period" data-i18n="exp.period.bth">Aug 2024 — Feb 2025</div>
           <div class="exp-company">Back to Human S.A.S.</div>
-          <div class="exp-role">AI Development Leader</div>
+          <div class="exp-role" data-i18n="exp.role.bth">AI Development Leader</div>
         </div>
         <div class="exp-content">
           <ul class="exp-points">
-            <li>Designed and implemented AI models using OpenAI, HuggingFace, and Groq.</li>
-            <li>Built robust, scalable APIs for AI products using FastAPI and Flask.</li>
-            <li>Implemented GPT-based chatbots for process automation and customer interaction.</li>
-            <li>Managed deployment and monitoring across GCP, AWS, Vercel, and Railway.</li>
+            <li data-i18n="exp.bullet.bth.1">Designed and implemented AI models using OpenAI, HuggingFace, and Groq.</li>
+            <li data-i18n="exp.bullet.bth.2">Built robust, scalable APIs for AI products using FastAPI and Flask.</li>
+            <li data-i18n="exp.bullet.bth.3">Implemented GPT-based chatbots for process automation and customer interaction.</li>
+            <li data-i18n="exp.bullet.bth.4">Managed deployment and monitoring across GCP, AWS, Vercel, and Railway.</li>
           </ul>
           <div class="exp-stack">
             <span class="tag">FastAPI</span>
@@ -190,15 +193,15 @@
 
       <div class="exp-item">
         <div class="exp-meta">
-          <div class="exp-period">Apr 2022 — Jul 2024</div>
+          <div class="exp-period" data-i18n="exp.period.db">Apr 2022 — Jul 2024</div>
           <div class="exp-company">DualBoot Partners</div>
-          <div class="exp-role">Backend Advanced Developer</div>
+          <div class="exp-role" data-i18n="exp.role.db">Backend Advanced Developer</div>
         </div>
         <div class="exp-content">
           <ul class="exp-points">
-            <li>Built a REST application in Django for commercial management with Google/Facebook login and Twilio integration.</li>
-            <li>Migrated APIs to FastAPI and set up monitoring in AWS for log tracking.</li>
-            <li>Developed and maintained an internal organizational system using Ruby on Rails.</li>
+            <li data-i18n="exp.bullet.db.1">Built a REST application in Django for commercial management with Google/Facebook login and Twilio integration.</li>
+            <li data-i18n="exp.bullet.db.2">Migrated APIs to FastAPI and set up monitoring in AWS for log tracking.</li>
+            <li data-i18n="exp.bullet.db.3">Developed and maintained an internal organizational system using Ruby on Rails.</li>
           </ul>
           <div class="exp-stack">
             <span class="tag">Django</span>
@@ -211,15 +214,15 @@
 
       <div class="exp-item">
         <div class="exp-meta">
-          <div class="exp-period">Dec 2020 — Mar 2022</div>
+          <div class="exp-period" data-i18n="exp.period.ayenda">Dec 2020 — Mar 2022</div>
           <div class="exp-company">Ayenda Hoteles</div>
-          <div class="exp-role">Backend Developer</div>
+          <div class="exp-role" data-i18n="exp.role.ayenda">Backend Developer</div>
         </div>
         <div class="exp-content">
           <ul class="exp-points">
-            <li>Maintained and developed hotel management platforms at scale.</li>
-            <li>Resolved bugs, improved performance, and delivered steady feature improvements.</li>
-            <li>Deployed payment system enhancements built with Ruby on Rails.</li>
+            <li data-i18n="exp.bullet.ayenda.1">Maintained and developed hotel management platforms at scale.</li>
+            <li data-i18n="exp.bullet.ayenda.2">Resolved bugs, improved performance, and delivered steady feature improvements.</li>
+            <li data-i18n="exp.bullet.ayenda.3">Deployed payment system enhancements built with Ruby on Rails.</li>
           </ul>
           <div class="exp-stack">
             <span class="tag">Ruby on Rails</span>
@@ -235,21 +238,21 @@
   <section id="education">
     <div class="section-header">
       <span class="section-num">03</span>
-      <h2 class="section-title">Education</h2>
+      <h2 class="section-title" data-i18n="section.education">Education</h2>
     </div>
     <div class="edu-grid">
       <div class="edu-item">
-        <div class="edu-degree">Software Engineering + Big Data for Business</div>
+        <div class="edu-degree" data-i18n="edu.degree.1">Software Engineering + Big Data for Business</div>
         <div class="edu-school">Politécnico Grancolombiano</div>
         <div class="edu-year">2023 – 2026</div>
       </div>
       <div class="edu-item">
-        <div class="edu-degree">Diploma in Computer Science</div>
+        <div class="edu-degree" data-i18n="edu.degree.2">Diploma in Computer Science</div>
         <div class="edu-school">Politécnico Grancolombiano</div>
-        <div class="edu-year">Apr – Jun 2026</div>
+        <div class="edu-year" data-i18n="edu.year.2">Apr – Jun 2026</div>
       </div>
       <div class="edu-item">
-        <div class="edu-degree">Full-Stack Engineering + Machine Learning</div>
+        <div class="edu-degree" data-i18n="edu.degree.3">Full-Stack Engineering + Machine Learning</div>
         <div class="edu-school">Holberton School</div>
         <div class="edu-year">2019 – 2020</div>
       </div>
@@ -265,7 +268,7 @@
   <section id="projects">
     <div class="section-header">
       <span class="section-num">04</span>
-      <h2 class="section-title">Projects</h2>
+      <h2 class="section-title" data-i18n="section.projects">Projects</h2>
     </div>
     <div class="proj-grid">
 
@@ -274,8 +277,8 @@
           <span class="proj-lang">Python</span>
           <a href="https://github.com/dalexach/real-state-scrapping" target="_blank" class="proj-link">GitHub →</a>
         </div>
-        <div class="proj-name">Real Estate Scraper</div>
-        <p class="proj-desc">Web scraper for real estate listings — collects, cleans, and stores property data from multiple sources for analysis and reporting.</p>
+        <div class="proj-name" data-i18n="proj.name.1">Real Estate Scraper</div>
+        <p class="proj-desc" data-i18n="proj.desc.1">Web scraper for real estate listings — collects, cleans, and stores property data from multiple sources for analysis and reporting.</p>
       </div>
 
       <div class="proj-item">
@@ -284,7 +287,7 @@
           <a href="https://github.com/dalexach/LetsPlay" target="_blank" class="proj-link">GitHub →</a>
         </div>
         <div class="proj-name">LetsPlay</div>
-        <p class="proj-desc">Python project — exploring game or activity management logic with a clean backend structure.</p>
+        <p class="proj-desc" data-i18n="proj.desc.2">Python project — exploring game or activity management logic with a clean backend structure.</p>
       </div>
 
       <div class="proj-item">
@@ -293,7 +296,7 @@
           <a href="https://github.com/dalexach/AirBnB_clone_v4" target="_blank" class="proj-link">GitHub →</a>
         </div>
         <div class="proj-name">AirBnB Clone</div>
-        <p class="proj-desc">Full-stack AirBnB clone — REST API with Flask, dynamic front-end with jQuery, and dual MySQL/file storage engine.</p>
+        <p class="proj-desc" data-i18n="proj.desc.3">Full-stack AirBnB clone — REST API with Flask, dynamic front-end with jQuery, and dual MySQL/file storage engine.</p>
       </div>
 
       <div class="proj-item">
@@ -302,7 +305,7 @@
           <a href="https://github.com/dalexach/simple_shell" target="_blank" class="proj-link">GitHub →</a>
         </div>
         <div class="proj-name">simple_shell</div>
-        <p class="proj-desc">A POSIX-compliant shell interpreter built in C — process management, environment variables, and built-in commands from scratch.</p>
+        <p class="proj-desc" data-i18n="proj.desc.4">A POSIX-compliant shell interpreter built in C — process management, environment variables, and built-in commands from scratch.</p>
       </div>
 
     </div>
@@ -312,17 +315,17 @@
   <section id="beyond">
     <div class="section-header">
       <span class="section-num">05</span>
-      <h2 class="section-title">Beyond code</h2>
+      <h2 class="section-title" data-i18n="section.beyond">Beyond code</h2>
     </div>
     <div class="beyond-row">
-      <p class="beyond-desc">
+      <p class="beyond-desc" data-i18n="beyond.desc">
         When I'm not building APIs or wrangling data, I work with my hands.
         I crochet, make amigurumis, cast resin pieces, and craft bracelets —
         it's my way of debugging the mind after a long day of debugging code.
       </p>
       <div class="beyond-links">
         <a href="https://www.instagram.com/aranitas_tejedoras2/" target="_blank" class="beyond-link">
-          <span class="beyond-label">Crafts · Instagram</span>
+          <span class="beyond-label" data-i18n="beyond.label">Crafts · Instagram</span>
           @aranitas_tejedoras2 →
         </a>
       </div>
@@ -332,14 +335,14 @@
   <!-- CONTACT -->
   <section id="contact">
     <div class="contact-row">
-      <h2 class="contact-headline">Let's work<br>together.</h2>
+      <h2 class="contact-headline" data-i18n-html="contact.headline">Let's work<br>together.</h2>
       <div class="contact-links">
         <a href="mailto:dalexach@gmail.com" class="contact-link">
           <span class="contact-link-type">Email</span>
           dalexach@gmail.com
         </a>
         <a href="tel:+573016983274" class="contact-link">
-          <span class="contact-link-type">Phone</span>
+          <span class="contact-link-type" data-i18n="contact.phone">Phone</span>
           (+57) 301 698 3274
         </a>
         <a href="https://github.com/dalexach" target="_blank" class="contact-link">
@@ -358,7 +361,6 @@
     </div>
   </section>
 
-  <!-- FOOTER -->
   <!-- BACK TO TOP -->
   <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
 
@@ -378,6 +380,7 @@
     });
     btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
   </script>
+  <script src="assets/js/i18n.js"></script>
 
 </body>
 </html>
