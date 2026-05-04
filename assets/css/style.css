@@ -428,8 +428,8 @@ footer p {
 /* BACK TO TOP */
 .back-to-top {
   position: fixed;
-  bottom: 2rem;
-  right: 2rem;
+  bottom: 3rem;
+  right: 2.5rem;
   z-index: 99;
   width: 36px;
   height: 36px;
