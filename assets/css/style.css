@@ -39,8 +39,18 @@ nav {
   letter-spacing: 0.04em;
   color: var(--ink);
   text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
 }
 .nav-logo span { color: var(--accent); }
+.nav-avatar {
+  width: 28px;
+  height: 28px;
+  object-fit: cover;
+  background: #6e8ff5;
+  image-rendering: pixelated;
+}
 nav ul { list-style: none; display: flex; gap: 2rem; }
 nav ul a {
   font-size: 13px;
@@ -414,6 +424,30 @@ footer p {
   transition: color 0.2s;
 }
 .footer-socials a:hover { color: var(--ink); }
+
+/* BACK TO TOP */
+.back-to-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 99;
+  width: 36px;
+  height: 36px;
+  background: var(--ink);
+  color: var(--paper);
+  border: none;
+  font-family: var(--mono);
+  font-size: 16px;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.25s, background 0.2s;
+}
+.back-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+}
+.back-to-top:hover { background: var(--accent); }
 
 /* ANIMATIONS */
 @keyframes fadeUp {
